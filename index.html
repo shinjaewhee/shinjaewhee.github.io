@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <!-- swiper -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="./css/aos.css">
     <title>Whee PortFolio</title>
     <style>
         :root{
@@ -278,10 +280,11 @@
             width: 100%;
             overflow: hidden;
         }
-        .sec05 .contact-flow p{
+        .sec05 .contact-flow MARQUEE{
             font-weight: 900;
             font-size: 100px;
             white-space: nowrap;
+            opacity: 0.2;
         }
 
         /* ---------------------------------------스와이퍼--------------------------------------- */
@@ -392,7 +395,7 @@
             .sec05 .contact-flow{
                 grid-area: 3/1/4/-1;
             }
-            .sec05 .contact-flow p{
+            .sec05 .contact-flow MARQUEE{
                 font-size: 120px;
             }
         }
@@ -488,7 +491,7 @@
     <section class="swiper wrap-swiper" id="wrap">
         <header class="header">
             <div class="container">
-                <h1 class="logo"><a href="./index.html"><img src="./images/logo.svg" alt="헤더 로고"></a></h1>
+                <h1 class="logo" title="홈으로 이동"><a href="./index.html"><img src="./images/logo.svg" alt="헤더 로고"></a></h1>
                 <div class="btn-nav active"><img src="./images/btn-nav.svg" alt="버튼네비"></div>
                 <nav>
                     <div class="nav-close"><img src="./images/xmark.svg" alt="네비 닫기"></div>
@@ -529,7 +532,7 @@
                     <h2 class="sec-tit">About</h2>
                     <div class="img-box"><img src="./images/picture01.jpg" alt="어바웃 이미지"></div>
                     <p>
-                        안녕하세요 신입 웹 퍼블리셔 <span>신재휘</span> 입니다.<br>
+                        안녕하세요, 웹 퍼블리셔 <span>신재휘</span> 입니다.<br>
                     </p>
                 </div>
             </section>
@@ -652,11 +655,11 @@
                     <h2 class="sec-tit">Contact</h2>
                     <div class="img-box"><img src="./images/picture02.jpg" alt="컨텍트 이미지"></div>
                     <div class="contact-con">
-                        <p>안녕하세요, 신입 웹 퍼블리셔 <span>신재휘</span>입니다.</p>
+                        <p>안녕하세요, 웹 퍼블리셔 <span>신재휘</span>입니다.</p>
                         <ul>
                             <li>
                                 <div class="img-box">
-                                    <a href="#">
+                                    <a href="#" title="메일">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
                                         <path fill="#ffffff" d="M2.063,3.25c-0.272,0-0.495,0.238-0.495,0.528v0.728l5.335,4.672c0.64,0.56,1.558,0.56,2.2,0l5.329-4.672
@@ -670,7 +673,7 @@
                             </li>
                             <li>
                                 <div class="img-box">
-                                    <a href="https://open.kakao.com/o/scODuv1f">
+                                    <a href="https://open.kakao.com/o/scODuv1f" title="카카오톡 오픈채팅">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
                                         <path fill="#ffffff" d="M2.756,9.659c0.306-0.571,0.212-1.275-0.234-1.744C1.856,7.216,1.5,6.375,1.5,5.5c0-1.984,1.994-4,5-4
@@ -693,7 +696,7 @@
                             </li>
                             <li>
                                 <div class="img-box">
-                                    <a href="https://www.instagram.com/jae_whee_?igsh=MTh5djExOXltdzRnag%3D%3D&utm_source=qr">
+                                    <a href="https://www.instagram.com/jae_whee_?igsh=MTh5djExOXltdzRnag%3D%3D&utm_source=qr" title="인스타그램">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             width="14px" height="16px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
                                         <path fill="#ffffff" d="M7.002,4.514c-1.927,0-3.481,1.555-3.481,3.483c0,1.928,1.554,3.482,3.481,3.482
@@ -715,7 +718,8 @@
                         </ul>
                     </div>
                     <div class="contact-flow">
-                        <p>Thank you for looking at the portfolio.</p>
+                        <!-- <p>Thank you for looking at the portfolio.</p> -->
+                        <MARQUEE behavior="scroll">Thank you for looking at the portfolio.</MARQUEE>
                     </div>
                 </div>
             </section>
@@ -730,6 +734,8 @@
     <script src="./js/jquery.min.js"></script>
     <!-- swiper -->
     <script src="./js/swiper-bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="./js/aos.js"></script>
     <script>
         secPadding();
 
