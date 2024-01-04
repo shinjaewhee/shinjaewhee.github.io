@@ -27,8 +27,6 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <!-- swiper -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <!-- AOS -->
-    <link rel="stylesheet" href="./css/aos.css">
     <title>Whee PortFolio</title>
     <style>
         :root{
@@ -89,11 +87,9 @@
            background:var(--color05);
            display:none;
            flex-flow: column nowrap;
-           padding: 20px;           
+           padding: 20px;
         }
-        .header nav.active{
-            display:flex;
-        }
+        
         .header nav .nav-close{
             margin-bottom: 50px;
             width: 100%;
@@ -110,7 +106,8 @@
             text-align: center;
         }
         .header nav ul li:hover{
-            color: #b33681;
+            color: var(--color07);
+            cursor: pointer;
         }
 
         .sec:nth-last-of-type(2n-1){
@@ -134,6 +131,15 @@
             font-weight: 900;
             font-size: 32px;
             color: var(--color07);
+        }
+        .sec01 h2 span:first-child{
+            animation: opa 2s linear 1s;
+        }
+        .sec01 h2 span:nth-child(2){
+            animation: opa 2s linear 2s;
+        }
+        .sec01 h2 p{
+            font-size: 20px;
         }
         .sec01 .img-box{
             width: 50px;
@@ -194,7 +200,35 @@
             padding-bottom: 5px;
         }
         .sec03 .skills-graph p{
+            position: relative;
             background: var(--color05);
+        }
+        .sec03 .skills-graph p::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 26px;
+            position: absolute;
+            top: 0;
+            background: var(--color07);
+        }
+        .sec03 .skills-graph li:nth-child(1) p::after{
+            width: 100%;
+        }
+        .sec03 .skills-graph li:nth-child(2) p::after{
+            width: 85%;
+        }
+        .sec03 .skills-graph li:nth-child(3) p::after{
+            width: 70%;
+        }
+        .sec03 .skills-graph li:nth-child(4) p::after{
+            width: 80%;
+        }
+        .sec03 .skills-graph li:nth-child(5) p::after{
+            width: 80%;
+        }
+        .sec03 .skills-graph li:nth-child(6) p::after{
+            width: 85%;
         }
 
         .sec04 .container{
@@ -226,8 +260,15 @@
             max-width: 500px;
             margin: 0 auto;
             position: relative;
+            overflow: hidden;
         }
-        .sec04 .port-swiper p{
+        .sec04 .port-swiper a .img-box{
+            transition:0.3s;
+        }
+        .sec04 .port-swiper a:hover .img-box{
+            transform:scale(1.2)
+        }
+        .sec04 .port-swiper a p{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -236,6 +277,9 @@
             fill: var(--color07);
             background: rgba(255,255,255,0.5);
             opacity: 0;
+        }
+        .sec04 .port-swiper a:hover p{
+            opacity:1;
         }
         .sec04 .port-swiper p span{
             position: absolute;
@@ -247,9 +291,7 @@
         .sec04 .port-swiper p svg{
             width: 50px;
         }
-        .sec04 .port-swiper p:hover{
-            opacity:1;
-        }
+       
 
         .sec05 .container{
             display: grid;
@@ -304,7 +346,6 @@
             display: none;
             left:20px !important;
             top: 50%;
-            bottom:-50%px !important;
             font-family:'Roboto';
             font-weight:900;
             font-size:0.8em;
@@ -312,6 +353,7 @@
         .swiper-pagination-bullet{
             width: 15px;
             height: 15px;
+            background: var(--color01);
         }
         .swiper-pagination-bullet-active{
             background: var(--color07);
@@ -357,6 +399,17 @@
 
             .sec-tit{
                 font-size: 40px;
+            }
+
+            .sec01 h2 span{
+                font-size: 50px;
+            }
+            .sec01 h2 p{
+                font-size: 30px;
+            }
+            .sec01 .img-box{
+                width: 60px;
+                height: 60px;
             }
 
             .sec02 .container{
@@ -432,6 +485,17 @@
                 font-size: 45px;
             }
 
+            .sec01 h2 span{
+                font-size: 70px;
+            }
+            .sec01 h2 p{
+                font-size: 35px;
+            }
+            .sec01 .img-box{
+                width: 80px;
+                height: 80px;
+            }
+
             .sec02 .container{
                 top: -90px;
             }
@@ -485,6 +549,16 @@
             
         }
 
+        @keyframes opa{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+
     </style>
 </head>
 <body>
@@ -492,15 +566,15 @@
         <header class="header">
             <div class="container">
                 <h1 class="logo" title="홈으로 이동"><a href="./index.html"><img src="./images/logo.svg" alt="헤더 로고"></a></h1>
-                <div class="btn-nav active"><img src="./images/btn-nav.svg" alt="버튼네비"></div>
-                <nav>
-                    <div class="nav-close"><img src="./images/xmark.svg" alt="네비 닫기"></div>
+                <div class="btn-nav active"><img class="open-nav" src="./images/btn-nav.svg" alt="버튼네비"></div>
+                <nav class="nav">
+                    <div class="nav-close"><img class="close-nav" src="./images/xmark.svg" alt="네비 닫기"></div>
                     <ul>
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li>HOME</li>
+                        <li>ABOUT</li>
+                        <li>SKILLS</li>
+                        <li>PORTFOLIO</li>
+                        <li>CONTACT</li>
                     </ul>
                 </nav>
             </div>
@@ -522,7 +596,7 @@
                         <span>H</span>
                         <span>E</span>
                         <span>E</span><br>
-                        Web Publisher PortFolio
+                        <p class="text">Web Publisher PortFolio</p>
                     </h2>
                     <div class="img-box"><img src="./images/scrolldown.svg" alt="스크롤 다운 이미지"></div>
                 </div>
@@ -734,13 +808,14 @@
     <script src="./js/jquery.min.js"></script>
     <!-- swiper -->
     <script src="./js/swiper-bundle.min.js"></script>
-    <!-- AOS -->
-    <script src="./js/aos.js"></script>
     <script>
         secPadding();
 
         $(window).resize(function(){
             secPadding();
+            if($(window).width()>=1596){
+                $('header nav').show();
+            }
         })
 
         function secPadding(){
@@ -750,17 +825,26 @@
                 paddingTop:headerHeight + 'px',
             })
         }
-        
+
         // 네비 open
-        $('.btn-nav img').click(function(){
-            $('.btn-nav img').hide();
-            $('nav').addClass('active');
-        })
+        // $('.btn-nav img').click(function(){
+        //     $('.btn-nav img').hide();
+        //     // $('nav').addClass('active');
+        //     // $('nav').fadeIn(300);
+        //     $('nav').slideDown(300);
+        //     // $('nav').show(300);
+        // })
+        
         // 네비 close
-         $('.nav-close img').click(function(){
-            $('.btn-nav img').show();
-            $('nav').removeClass('active');
-        })
+        //  $('.nav-close img').click(function(){
+        //     $('.btn-nav img').show();
+        //     // $('nav').removeClass('active');
+        //     // $('nav').fadeOut(300);
+        //     $('nav').slideUp(300);
+        //     // $('nav').hide(300);
+        // })
+        
+        
 
         // 스와이퍼
         var wrapSwiper = new Swiper(".wrap-swiper", {
@@ -773,15 +857,111 @@
                 clickable: true,
             },
         });
-
+        
         var portSwiper = new Swiper(".port-swiper", {
             slidesPerView:1.5,
             speed: 700,            
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
+            breakpoints: {
+                // when window width is >= 320px
+                640: {
+                slidesPerView: 2.5,
+                // spaceBetween: 20
+                },
+                // when window width is >= 480px
+                960: {
+                slidesPerView: 3.2,
+                // spaceBetween: 30
+                },
+                // when window width is >= 640px
+                1200: {
+                slidesPerView: 4.3,
+                // spaceBetween: 40
+                }
+            }
         });
+        
+        // 네비게이션
+        $('.portfolio nav li').eq(0).click(function(){
+            portSwiper.slideTo(0);
+        })
+
+        $('.portfolio nav li').eq(1).click(function(){
+            portSwiper.slideTo(4);
+        })
+
+        $('header nav li').click(function(){
+            let targetIdx = $(this).index();
+            wrapSwiper.slideTo(targetIdx);
+        })
+
+        $('#wrap').click(function(e){
+            if($(window).width()<1596){            
+                if($(e.target).hasClass('open-nav')){
+                    $('.btn-nav img').hide();
+                    $('header nav').slideDown(300);
+                }else if($(e.target).hasClass('close-nav')){
+                    $('.btn-nav img').show();
+                    $('header nav').slideUp(300);
+                }else if(!$(e.target).hasClass('nav') && !$(e.target).parent('.nav').length>=1){
+                    $('header nav').hide(300);
+                    $('.btn-nav img').show();
+                }
+            }
+        })
+
+        // HOME 텍스트 타이핑 효과
+        var words = ['Web Publisher PortFolio','Im Web Publisher','Im Web Designer'],
+            cursor = '┃',
+            part,
+            i = 0,
+            offset = 0,
+            len = words.length,
+            forwards = true,
+            skip_count = 0,
+            skip_delay = 20,
+            speed = 100;
+            
+        var wordflick = function () {
+            setInterval(function () {
+                if (forwards) {
+                    if (offset >= words[i].length) {
+                        ++skip_count;
+                        if (skip_count == skip_delay) {
+                            forwards = false;
+                            skip_count = 0;
+                        }
+                    }
+                }
+                else {
+                    if (offset == 0) {
+                        forwards = true;
+                        i++;
+                        offset = 0;
+                        if (i >= len) {
+                            i = 0;
+                        }
+                    }
+                }
+                part = words[i].substr(0, offset);
+                if (skip_count == 0) {
+                    if (forwards) {
+                        offset++;
+                    }
+                    else {
+                        offset-=3;
+                        if(offset<0){
+                            offset = 0;
+                        }
+                    }
+                }
+                $('.text').text(part + cursor);
+            }, speed);
+        };
+
+        $(document).ready(function () {
+            wordflick();
+        });
+
     </script>
 </body>
 </html>
