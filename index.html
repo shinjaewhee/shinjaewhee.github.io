@@ -205,7 +205,7 @@
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto auto auto;
-            gap: 20px;
+            gap: 10px;
         }
         .sec03 .skills-icons ul{
             display: grid;
@@ -215,26 +215,29 @@
             justify-items: center;
         }
         .sec03 .img-box{
-            width:100px;
+            width:90px;
         }
         .sec03 .skills-graph ul{
             display: grid;
         }
         .sec03 .skills-graph li{
-            padding: 5px 0;
+            padding: 2px 0;
         }
         .sec03 .skills-graph h3{
-            padding-bottom: 5px;
+            padding-bottom: 3px;
+            font-size: 15px;
         }
         .sec03 .skills-graph p{
             position: relative;
             background: var(--color05);
+            height: 20px;
+            font-size: 14px;
         }
         .sec03 .skills-graph p::after{
             content: '';
             display: block;
             width: 100%;
-            height: 26px;
+            height: 20px;
             position: absolute;
             top: 0;
             background: var(--color07);
@@ -323,7 +326,7 @@
         .sec05 .container{
             display: grid;
             grid-template-rows: auto auto auto auto auto;
-            gap: 20px;
+            gap: 10px;
             overflow: hidden;
         }
         .sec05 ul{
@@ -339,11 +342,10 @@
             color: var(--color07);
         }
         .sec05 svg{
-            width: 100px;
+            width: 70px;
         }
         .sec05 li:hover path{
             fill: var(--color07);
-        
         }
         .sec05 .contact-flow{
             width: 100%;
@@ -453,24 +455,45 @@
                 height: 420px;
             }
 
+            .sec03 .container{
+                gap: 20px;
+            }
             .sec03 .img-box{
                 width:100px;
             }
+            .sec03 .skills-graph li{
+                padding: 5px 0;
+            }
+            .sec03 .skills-graph h3{
+                padding-bottom: 5px;
+                font-size: 20px;
+            }
+            .sec03 .skills-graph p{
+                height: 26px;
+                font-size: 18px;
+            }
+            .sec03 .skills-graph p::after{
+                height: 26px;
+            }
 
             .sec04 .port-swiper p span{
-                top: 20px;
-                font-size: 30px;
+                top: 10px;
+                font-size: 20px;
             }
             .sec04 .port-swiper p svg{
-                width: 100px;
+                width: 60px;
             }
 
             .sec05 .container{
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto auto auto;
+                gap: 20px;
             }
             .sec05 .sec-tit{
                 grid-area: 1/1/2/-1;
+            }
+            .sec05 svg{
+                width: 80px;
             }
             .sec05 .contact-flow{
                 grid-area: 3/1/4/-1;
@@ -531,6 +554,9 @@
                 height: 520px;
             }
 
+            .sec03 .container{
+                gap: 30px;
+            }
             .sec03 .skills-icons ul{
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
@@ -545,11 +571,18 @@
             }
 
             .sec04 .port-swiper p span{
-                top: 30px;
-                font-size: 50px;
+                top: 5px;
+                font-size: 30px;
             }
             .sec04 .port-swiper p svg{
-                width: 150px;
+                width: 70px;
+            }
+
+            .sec05 .container{
+                gap: 30px;
+            }
+            .sec05 svg{
+                width: 90px;
             }
 
             .swiper-pagination{
@@ -726,7 +759,7 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="#">
-                                    <div class="img-box"><img src="./images/m-index.png" alt="포트폴리오 모바일"></div>
+                                    <div class="img-box"><img src="./images/m-design.png" alt="포트폴리오 모바일"></div>
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
                                         <span>Mobile ver</span>
@@ -735,7 +768,7 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="#">
-                                    <div class="img-box"><img src="./images/t-index.png" alt="포트폴리오 테블릿"></div>
+                                    <div class="img-box"><img src="./images/t-design.png" alt="포트폴리오 테블릿"></div>
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
                                         <span>Tablet ver</span>
@@ -744,7 +777,7 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="#">
-                                    <div class="img-box"><img src="./images/d-index.png" alt="포트폴리오 데스크탑"></div>
+                                    <div class="img-box"><img src="./images/d-design.png" alt="포트폴리오 데스크탑"></div>
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
                                         <span>Desktop ver</span>
@@ -753,7 +786,7 @@
                             </li>
                             <li class="swiper-slide">
                                 <a href="./index.html">
-                                    <div class="img-box"><img src="./images/신로고.PNG" alt="포트폴리오 퍼블리싱"></div>
+                                    <div class="img-box"><img src="./images/pub-design.png" alt="포트폴리오 퍼블리싱"></div>
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
                                         <span>Publishing</span>
@@ -960,33 +993,33 @@
             skip_delay = 20,
             speed = 100;
             
-        var wordflick = function () {
-            setInterval(function () {
-                if (forwards) {
-                    if (offset >= words[i].length) {
+        var wordflick = function(){
+            setInterval(function (){
+                if(forwards){
+                    if(offset >= words[i].length){
                         ++skip_count;
-                        if (skip_count == skip_delay) {
+                        if(skip_count == skip_delay){
                             forwards = false;
                             skip_count = 0;
                         }
                     }
                 }
-                else {
-                    if (offset == 0) {
+                else{
+                    if(offset == 0){
                         forwards = true;
                         i++;
                         offset = 0;
-                        if (i >= len) {
+                        if(i >= len){
                             i = 0;
                         }
                     }
                 }
                 part = words[i].substr(0, offset);
-                if (skip_count == 0) {
-                    if (forwards) {
+                if(skip_count == 0){
+                    if(forwards){
                         offset++;
                     }
-                    else {
+                    else{
                         offset-=3;
                         if(offset<0){
                             offset = 0;
@@ -997,7 +1030,7 @@
             }, speed);
         };
 
-        $(document).ready(function () {
+        $(document).ready(function(){
             wordflick();
         });
 
