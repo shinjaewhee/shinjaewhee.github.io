@@ -418,6 +418,7 @@
             fill: var(--color07);
         }
         .contact-flow{
+            grid-area: 3/1/4/-1;
             overflow: hidden;
             position: relative;            
         } 
@@ -427,7 +428,7 @@
             font-size: 5em;
             opacity: 0.6;
             transform: translateX(100%);
-            animation: scroll-txt 18s linear 0.5s infinite;
+            animation: scroll-txt 18s linear infinite;
         }
        
 
@@ -578,11 +579,10 @@
             .sec05 svg{
                 width: 80px;
             }
-            .sec05 .contact-flow{
-                grid-area: 3/1/4/-1;
-            }
-            .sec05 .contact-flow MARQUEE{
-                font-size: 120px;
+            .scroll-txt{
+                width: 300%;
+                font-size: 7em;
+                animation: scroll-txt 23s linear 0.2s infinite;
             }
         }
 
@@ -674,6 +674,11 @@
             }
             .sec05 svg{
                 width: 90px;
+            }
+            .scroll-txt{
+                width: 200%;
+                font-size: 7em;
+                animation: scroll-txt 23s linear 0.2s infinite;
             }
 
             .swiper-pagination{
