@@ -354,7 +354,44 @@
         .sec04 .port-swiper p svg{
             width: 50px;
         }
-       
+        .modal{
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100000;
+            padding: 50px;
+            background:rgba(88, 85, 85, 0.7);
+        }
+        .modal-inner-box{
+            width: auto;
+            height: 500px;
+            margin-top: 50px;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: auto;
+            background: var(--color05);
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            animation: zoom 0.5s;
+        }
+        .modal-inner-box::-webkit-scrollbar{
+            display: none;
+        }
+        .modal-close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .modal-close:hover{
+            color: var(--color07);
+        }
 
         .sec05 .container{
             display: grid;
@@ -516,6 +553,15 @@
             .sec04 .port-swiper p svg{
                 width: 60px;
             }
+            .modal{
+                padding: 100px;
+            }
+            .modal-inner-box{
+                width: 700px;
+                height: 700px;
+                margin-top: 0;
+                padding: 30px;
+            }
 
             .sec05 .container{
                 grid-template-columns: 1fr 1fr;
@@ -610,6 +656,14 @@
             .sec04 .port-swiper p svg{
                 width: 70px;
             }
+            .modal{
+                padding: 80px;
+            }
+            .modal-inner-box{
+                width: 1000px;
+                height: 800px;
+                padding: 50px;
+            }
 
             .sec05 .container{
                 gap: 30px;
@@ -662,6 +716,11 @@
                 opacity: 0.5;
             }
             
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
         }
 
     </style>
@@ -838,7 +897,7 @@
                         <ul>
                             <li>
                                 <div class="img-box">
-                                    <a href="#" title="메일">
+                                    <a href="mailto:jaewhee0724@gmail.com" title="메일">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
                                         <path fill="#ffffff" d="M2.063,3.25c-0.272,0-0.495,0.238-0.495,0.528v0.728l5.335,4.672c0.64,0.56,1.558,0.56,2.2,0l5.329-4.672
@@ -908,6 +967,16 @@
         </section>
         <div class="swiper-pagination"></div>
     </section>
+    <div class="modal">
+        <div class="modal-inner-box">
+            <span class="modal-close">&times;</span>
+            <div class="img-box" id="modal-img">
+                <img class="modal-content" src="./images/portfolio-style-guide.png" alt="포트폴리오 스타일 가이드">
+            </div>
+        </div>
+    </div>
+    
+
 
     <!-- jquery -->
     <script src="./js/jquery.min.js"></script>
@@ -931,25 +1000,7 @@
             })
         }
 
-        // 네비 open
-        // $('.btn-nav img').click(function(){
-        //     $('.btn-nav img').hide();
-        //     // $('nav').addClass('active');
-        //     // $('nav').fadeIn(300);
-        //     $('nav').slideDown(300);
-        //     // $('nav').show(300);
-        // })
-        
-        // 네비 close
-        //  $('.nav-close img').click(function(){
-        //     $('.btn-nav img').show();
-        //     // $('nav').removeClass('active');
-        //     // $('nav').fadeOut(300);
-        //     $('nav').slideUp(300);
-        //     // $('nav').hide(300);
-        // })
-        
-        
+                
 
         // 스와이퍼
         var wrapSwiper = new Swiper(".wrap-swiper", {
@@ -985,6 +1036,8 @@
             }
         });
         
+
+
         // 네비게이션
         $('.portfolio nav li').eq(0).click(function(){
             portSwiper.slideTo(0);
@@ -1013,6 +1066,26 @@
                 }
             }
         })
+
+        // 네비 open
+        // $('.btn-nav img').click(function(){
+        //     $('.btn-nav img').hide();
+        //     // $('nav').addClass('active');
+        //     // $('nav').fadeIn(300);
+        //     $('nav').slideDown(300);
+        //     // $('nav').show(300);
+        // })
+        
+        // 네비 close
+        //  $('.nav-close img').click(function(){
+        //     $('.btn-nav img').show();
+        //     // $('nav').removeClass('active');
+        //     // $('nav').fadeOut(300);
+        //     $('nav').slideUp(300);
+        //     // $('nav').hide(300);
+        // })
+
+
 
         // HOME 텍스트 타이핑 효과
         var words = ['Web Publisher PortFolio','Im Web Publisher','Im Web Designer'],
@@ -1067,6 +1140,44 @@
             wordflick();
         });
 
+
+
+        // portfolio 모달창
+        // let modal = document.querySelector(".modal");
+        // let btnModalOpen = document.querySelector(".port-swiper a");
+        // let modal_img = document.querySelector(".modal-content");
+        // let btnModalClose = document.querySelector(".modal-close");
+        // // console.log(`modal ${modal}, btn오픈 ${btnModalOpen}, btn클로즈 ${btnModalClose}`);
+        
+        // // // modal open event
+        // btnModalOpen.addEventListener('click', ()=>{
+        //     modalDisplay("block");
+        //     // modal_img.src = img.src;
+        // });
+
+        // // // // modal close event
+        // btnModalClose.addEventListener('click', ()=>{
+        //     modalDisplay("none");
+        // });
+
+        // modal.addEventListener('click', ()=>{
+        //     modalDisplay("none");
+        // });
+        
+        // modal_img.addEventListener('click', ()=>{
+        //     modalDisplay("none");
+        // });
+        
+        $('.port-swiper li').click(function(){
+            let sltIdx = $(this).index();
+            $('#modal-img').load(`./ajax/modal.html #modal0${sltIdx}`);
+            $('.modal').show();
+        })
+
+        $('.modal-close,.modal').click(function(){
+            $('.modal').hide();
+        })
+        
     </script>
 </body>
 </html>
