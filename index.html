@@ -417,18 +417,21 @@
         .sec05 li:hover path{
             fill: var(--color07);
         }
-        .sec05 .contact-flow{
-            width: 100%;
+        .contact-flow{
             overflow: hidden;
-        }
-        .sec05 .contact-flow MARQUEE{
+            position: relative;            
+        } 
+        .scroll-txt{
+            width: 390%;
             font-weight: 900;
-            font-size: 100px;
-            white-space: nowrap;
-            opacity: 0.2;
+            font-size: 5em;
+            opacity: 0.6;
+            transform: translateX(100%);
+            animation: scroll-txt 18s linear 0.5s infinite;
         }
+       
 
-        /* ---------------------------------------스와이퍼--------------------------------------- */
+        /* ---------------------------------------스와이퍼 start--------------------------------------- */
         .swiper {
             width: 100%;
             height: 100vh;
@@ -457,6 +460,7 @@
         .swiper-pagination-bullet-active{
             background: var(--color07);
         }
+        /* ---------------------------------------스와이퍼 end--------------------------------------- */
 
 
 
@@ -679,7 +683,7 @@
 
 
 
-        /* ---------------------------------------animation--------------------------------------- */
+        /* ---------------------------------------animation start--------------------------------------- */
         @keyframes moving-y{
             0%{
                 transform: translate(-50%,0);
@@ -722,6 +726,16 @@
             from {transform: scale(0)}
             to {transform: scale(1)}
         }
+
+        @keyframes scroll-txt{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        /* ---------------------------------------animation end--------------------------------------- */
 
     </style>
 </head>
@@ -956,8 +970,7 @@
                         </ul>
                     </div>
                     <div class="contact-flow">
-                        <!-- <p>Thank you for looking at the portfolio.</p> -->
-                        <MARQUEE behavior="scroll">Thank you for looking at the portfolio.</MARQUEE>
+                        <div class="scroll-txt">Thank you for looking at the portfolio.</div>
                     </div>
                 </div>
             </section>
