@@ -195,6 +195,7 @@
 
         .sec02 .container{
             display: grid;
+            justify-content: center;
             grid-template-columns: auto;
             grid-template-rows: auto auto auto;
             row-gap: 20px;
@@ -220,14 +221,14 @@
             opacity: 1;
         }
         .sec02 p{
+            line-height: 1.9;
             opacity: 0;
             transition: 2s 1.5s;
+            align-self: center;
+            text-align: left;
         }
         .sec02.swiper-slide-active p{
             opacity: 1;
-        }
-        .sec02 p{
-            white-space: nowrap;
         }
         .sec02 span{
             font-weight: 800 !important;
@@ -513,6 +514,9 @@
         .sec05.swiper-slide-active .con-img-box{
             opacity: 1;
         }
+        .sec05 .contact-con{
+            align-self: center;
+        }
         .sec05 .contact-con p{
             padding-bottom: 20px;
             opacity: 0;
@@ -594,10 +598,10 @@
             align-items: center;
         }
         .swiper-pagination{
+            width: 10%;
             display: none;
             left:20px !important;
             top: 50%;
-            font-family:'Roboto';
             font-weight:900;
             font-size:0.8em;
         }
@@ -665,27 +669,31 @@
             }
 
             .sec02 .container{
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2,50%);
                 grid-template-rows: auto auto;
                 column-gap: 20px;
+                row-gap: 50px;
                 top: -40px;
             }
             .sec02 .sec-tit{
                 grid-area: 1/1/2/-1;
             }
+            .sec02 p{
+                font-size: 20px;
+            }
             .sec02 .img-box img{
-                width: 420px;
+                width: 380px;
                 height: 420px;
             }
 
             .sec03 .container{
-                gap: 20px;
+                gap: 10px;
             }
             .sec03 .img-box{
                 width:100px;
             }
             .sec03 .skills-graph li{
-                padding: 5px 0;
+                padding: 2px 0;
             }
             .sec03 .skills-graph h3{
                 padding-bottom: 5px;
@@ -724,11 +732,14 @@
             .sec05 .sec-tit{
                 grid-area: 1/1/2/-1;
             }
+            .sec05 p{
+                font-size: 20px;
+            }
             .sec05 svg{
                 width: 80px;
             }
             .scroll-txt{
-                width: 300%;
+                width: 350%;
                 font-size: 7em;
                 animation: scroll-txt 23s linear 0.2s infinite;
             }
@@ -778,7 +789,7 @@
             }
 
             .sec02 .container{
-                top: -90px;
+                top: -50px;
             }
             .sec02 .img-box img{
                 width: 520px;
@@ -819,6 +830,9 @@
 
             .sec05 .container{
                 gap: 30px;
+            }
+            .sec05 p{
+                font-size: 30px;
             }
             .sec05 svg{
                 width: 90px;
@@ -948,6 +962,11 @@
                     <div class="img-box"><img src="./images/picture01.jpg" alt="어바웃 이미지"></div>
                     <p>
                         안녕하세요, 웹 퍼블리셔 <span>신재휘</span> 입니다.<br>
+                        시각 디자인과 제품 디자인을 공부했었고,
+                        웹 퍼블리싱에 관심을 가지게 되었습니다.
+                        현재 웹 디자인, 퍼블리싱에 즐거움을 느끼고,
+                        더 나아가 안주하지않고 끊임없이 노력하여
+                        성장하고 발전하는 웹 퍼블리셔가 되고싶습니다.
                     </p>
                 </div>
             </section>
@@ -1073,7 +1092,7 @@
                     <h2 class="sec-tit">Contact</h2>
                     <div class="img-box con-img-box"><img src="./images/picture02.jpg" alt="컨텍트 이미지"></div>
                     <div class="contact-con">
-                        <p>안녕하세요, 웹 퍼블리셔 <span>신재휘</span>입니다.</p>
+                        <p>감사합니다. 웹 퍼블리셔 <span>신재휘</span>였습니다.</p>
                         <ul>
                             <li>
                                 <div class="img-box">
