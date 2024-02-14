@@ -56,6 +56,20 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+        #skip-menu a{
+            position:fixed;
+            left:50%;
+            top:0;
+            z-index:2000;
+            transform:translate(-50%,-110%);
+            padding:10px;
+            background:black;
+            font-size:32px;
+            color:white;
+        }
+        #skip-menu a:focus{
+            transform:translate(-50%,0);
+        }
 
         .header{
             position: fixed;
@@ -916,6 +930,7 @@
     </style>
 </head>
 <body>
+    <div id="skip-menu"><a href="#">본문 바로가기</a></div>
     <section class="swiper wrap-swiper" id="wrap">
         <header class="header">
             <div class="container">
@@ -1093,6 +1108,22 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
+                                <a title="도미노 테블릿 시안 디자인" href="#">
+                                    <div class="img-box"><img src="./images/domino-t-design.png" alt="도미노 테블릿"></div>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a title="도미노 데스크탑 시안 디자인" href="#">
+                                    <div class="img-box"><img src="./images/domino-d-design.png" alt="도미노 데스크탑"></div>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
                                 <a title="포트폴리오 퍼블리싱" href="./index.html">
                                     <div class="img-box"><img src="./images/pub-design.png" alt="포트폴리오 퍼블리싱"></div>
                                     <p>
@@ -1103,6 +1134,14 @@
                             <li class="swiper-slide">
                                 <a title="메가커피 리뉴얼 퍼블리싱" href="https://shinjaewhee.github.io/megacoffee/">
                                     <div class="img-box"><img src="./images/megacoffee-pub-design.png" alt="메가커피 리뉴얼 퍼블리싱"></div>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a title="도미노 리뉴얼 퍼블리싱" href="https://shinjaewhee.github.io/domino/">
+                                    <div class="img-box"><img src="./images/domino-pub-design.png" alt="도미노 리뉴얼 퍼블리싱"></div>
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
                                     </p>
@@ -1266,7 +1305,7 @@
         })
 
         $('.portfolio nav li').eq(1).click(function(){
-            portSwiper.slideTo(7);
+            portSwiper.slideTo(9);
         })
 
         $('header nav li').click(function(){
